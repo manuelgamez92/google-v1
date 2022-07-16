@@ -5,7 +5,7 @@ export default function User() {
    if(session){
     return(
         <>
-        <img onClick={signOut} src={session.user.image} className="h-10 w-10 rounded-full hover:bg-gray-200 cursor-pointer p-1"></img>
+        <img onClick={signOut} src={session.user.image} className="h-10 w-10 rounded-full hover:bg-gray-200 cursor-pointer p-1" referrerPolicy="no-referrer"></img>
         </>
     )
    }

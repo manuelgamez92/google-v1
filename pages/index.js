@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import styles from '../styles/Home.module.css'
 import Image from 'next/image';
-
+import { SearchIcon, MicrophoneIcon } from "@heroicons/react/solid";
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -15,8 +15,17 @@ export default function Home() {
       <Header></Header>
     
       {/* Body */}
-      <form>
-        <Image src="https://1000marcas.net/wp-content/uploads/2020/02/logo-Google.png" width="300" height="100" />
+      <form className="flex flex-col items-center mt-50">
+        <Image src="https://1000marcas.net/wp-content/uploads/2020/02/logo-Google.png" width="250" height="150" />
+        <div className='flex w-full mt-2 mx-auto max-w-[90%] border border-gray-200 hover:shadow-lg focus-within:shadow-lg px-5 py-3 rounded-full items-center sm:max-w-lg lg:max-w-2x1'>
+        <SearchIcon className="h-5" />
+        <input type="text" className="flex-grow focus:outline-none px-2" />
+        <MicrophoneIcon className="h-5" />
+        </div>
+        <div className="flex flex-column space-x-5 mt-4">
+        <button className="bg-gray-100 p-2 rounded-sm ">Im feeling lucky</button>
+        <button className="bg-gray-100 p-2 rounded-sm ">Google search</button>
+        </div>
       </form>
 
       {/* Footer */}
