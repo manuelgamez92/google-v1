@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from '../components/Header'
 import styles from '../styles/Home.module.css'
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -14,6 +15,9 @@ export default function Home() {
       <Header></Header>
     
       {/* Body */}
+      <form>
+        <Image src="https://1000marcas.net/wp-content/uploads/2020/02/logo-Google.png" width="300" height="100" />
+      </form>
 
       {/* Footer */}
 
